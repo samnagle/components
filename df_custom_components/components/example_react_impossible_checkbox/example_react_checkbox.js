@@ -70,7 +70,7 @@ const App = () => {
         setChecked(false)
         setCount(count + 1)
       }
-      let onBearComplete = () => {}
+      let onBearComplete = () => { }
       if (Math.random() > 0.5 && count > angerLimit)
         onBearComplete = () => {
           SOUNDS.GROAN.play()
@@ -84,11 +84,11 @@ const App = () => {
         .add(
           count > armLimit
             ? to(bearRef.current, {
-                duration: bearDuration,
-                onComplete: onBearComplete,
-                y: bearTranslation,
-              })
-            : () => {}
+              duration: bearDuration,
+              onComplete: onBearComplete,
+              y: bearTranslation,
+            })
+            : () => { }
         )
         .to(
           armWrapRef.current,
