@@ -1,7 +1,7 @@
 name: Example React Address Book
 description: 'Example Address Book component using React from a CDN.'
 js:
-  example_react_address_book.js: {}
+  example_react_address_book.js: {attributes: { type: 'text/babel' }}
   //cdnjs.cloudflare.com/ajax/libs/react/16.13.1/umd/react.production.min.js: { type: external, minified: true, crossorigin: anonymous }
   //cdnjs.cloudflare.com/ajax/libs/react-dom/16.13.1/umd/react-dom.production.min.js: { type: external, minified: true, crossorigin: anonymous }
   //cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/gsap.min.js: { type: external, minified: true, crossorigin: anonymous }
