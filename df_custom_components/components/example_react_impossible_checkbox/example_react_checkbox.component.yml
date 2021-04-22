@@ -8,3 +8,4 @@ js:
   //unpkg.com/babel-standalone@6/babel.min.js: { type: external, minified: true, crossorigin: anonymous }
 css:
   example_react_checkbox.css: {}
+

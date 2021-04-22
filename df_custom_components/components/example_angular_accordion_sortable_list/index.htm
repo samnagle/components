@@ -1,0 +1,28 @@
+<html ng-app="ui.bootstrap.test">
+<body>
+  <div ng-controller="MainCtrl">
+    <label class="checkbox">
+      <input type="checkbox" ng-model="oneAtATime">&nbsp;Toggle: Allow Only One Section Open At A Time
+    </label>
+    <div ng-controller="SectionsCtrl" class='accord_' >
+      <h2>Sortable Accordion</h2>
+	  <h4>Click To Open && Drag Headers To Sort Each<br>(Except The Sub Sections)</h4>
+      <accordion close-others="$parent.oneAtATime" ui-sortable="sortableOptions" ng-model="sections">
+        <accordion-group class="mPart" ng-repeat="section in sections">
+          <accordion-heading>{{section.title}}</accordion-heading>
+          {{section.content}}
+          <accordion ng-if="section.subSections" close-others="$parent.oneAtATime">
+            <accordion-group class="mSubPart" ng-repeat="subSection in section.subSections">
+              <accordion-heading>{{subSection.title}}</accordion-heading>
+			  {{subSection.content}}
+            </accordion-group>
+          </accordion>
+        </accordion-group>
+      </accordion>
+    </div>
+  </div>
+   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.11.2/ui-bootstrap-tpls.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-sortable/0.13.0/sortable.min.js"></script>
+</body>
+</html>

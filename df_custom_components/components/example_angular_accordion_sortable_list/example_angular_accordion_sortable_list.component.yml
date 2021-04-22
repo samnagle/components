@@ -1,0 +1,6 @@
+name: Example Angular List
+description: 'Example angular accordian sortable list'
+js:
+  example_angular_accordian_sortable_list.js: {}
+css:
+  example_angular_accordian_sortable_list.css: {}
