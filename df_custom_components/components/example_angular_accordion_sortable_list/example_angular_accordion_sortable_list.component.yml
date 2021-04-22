@@ -4,3 +4,5 @@ js:
   example_angular_accordian_sortable_list.js: {}
 css:
   example_angular_accordian_sortable_list.css: {}
+dependencies:
+ - component/example_angular_lib
