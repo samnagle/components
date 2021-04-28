@@ -1,7 +1,8 @@
 name: React Find a Doctor
 description: 'Find a Doctor component using React from a CDN.'
+# type: 'block'
 js:
-  example_react_calc.js: {attributes: { type: 'text/babel' }}
+  find_a_doctor.js: {attributes: { type: 'text/babel' }}
 css:
   find_a_doctor.css: {}
 # This component makes use of an existing shared library which is provided by
