@@ -1,0 +1,14 @@
+name: React Find a Doctor
+description: 'Find a Doctor component using React from a CDN.'
+js:
+  example_react_calc.js: {attributes: { type: 'text/babel' }}
+css:
+  find_a_doctor.css: {}
+# This component makes use of an existing shared library which is provided by
+#   another component (library type). This is how to share and manage common
+#   assets across different components.
+dependencies:
+ - component/react_lib
+cache:
+  max-age: 0
+# Inspired by: 
