@@ -1,15 +1,18 @@
 name: React Find a Doctor
-description: 'Find a Doctor component using React from a CDN.'
-# type: 'block'
+description: 'Find a Doctor component using React from a CDN. https://codepen.io/samnagle/pen/OJWGmov'
+type: 'block'
 js:
   find_a_doctor.js: {attributes: { type: 'text/babel' }}
 css:
+  //cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css: { type: external, minified: true, crossorigin: anonymous }
   find_a_doctor.css: {}
 # This component makes use of an existing shared library which is provided by
 #   another component (library type). This is how to share and manage common
 #   assets across different components.
+template: 'find_a_doctor.htm'
+enable_field: true
 dependencies:
  - component/react_lib
 cache:
-  max-age: 0
-# Inspired by: 
+  max-age: 60
+
