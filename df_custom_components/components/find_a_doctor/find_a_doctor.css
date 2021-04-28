@@ -97,7 +97,7 @@ navbar .input-group-text {
   height: 100vh;
   display: flex;
   align-items: center;
-  interval: false;
+  data-interval: false;
   // margin-bottom: 20px;
 }
 .recommended-slider .container {
