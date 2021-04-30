@@ -1,208 +1,280 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-:root {
-  --primaryTextColor: #000;
-  --secondaryTextColor: #1889c5;
-  --tertiaryTextColor: #3a4972;
-  --gTextColor: #007f7b;
-  --whiteTextColor: #ffffff;
-  --starColor: #fea700;
-  --btnColor: #132240;
-  --cardBg: #f6f2ec;
-}
+
 *,
 ::before,
 ::after {
   margin: 0;
   padding: 0;
 }
-body {
-  font-size: 1rem;
-  font-family: sans-serif;
-}
-header {
-  background-color: #e9ecef;
-  color: var(--primaryTextColor);
+
+
+:root {
+    --rootHeight: 100vh; // outer-container height (the whole viewport)
+    --rootWidth: 100%; // outer-container height
+    --containerInnerHeight: 100%; // percentage height of the root you want to fill (excluding margin/header size)
+    --containerInnerWidth: 70%;
+    --searchFormHeight: 80%; // 80% seems to match the natural height of the carousel
+    --searchFormWidth: 100%;
+    --carouselSliderPadding: 20px 60px;
+    --containerInnerPadding: 60px 10px;
+    --nextPrevIconSize: 40px; // this changes the next/prev icon size
+    --btnPadding: 10px 30px; // padding for the "GO" button
+    --startAgainBtnTextColor: #000;
+    --startAgainBtnColor: transparent;
+    --primaryTextColor: #000;
+    --secondaryTextColor: #1889c5;
+    --tertiaryTextColor: #3a4972;
+    --gTextColor: #007f7b;
+    --whiteTextColor: #ffffff;
+    --btnTextColor: #fff;
+    --starColor: #fea700;
+    --btnColor: blue; // background color
+    --cardBg: #f6f2ec; // the (currently) grey/cream/off-white background color of the card 
 }
 
-navbar .input-group-text {
-  background-color: white;
-  border-right: 1px solid white;
+.search-container-000 .dropdown-toggle::after {
+    display: none;
 }
 
-.dropdown-toggle::after {
-  display: none;
+.search-container-000 {
+    height: var(--rootHeight);
+    width: var(--rootWidth);
+    position: relative;
 }
-.hero-section {
-  height: 90vh;
+
+.search-container-000 .form-container, .search-container-000 .recommended-slider {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
 }
-.hero-image {
-  width: auto;
-  height: 50vh;
-  position: relative;
-  /* background-image: url(../img/COVID-vaccine-homepage-banner.jpg); */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+
+.search-container-000 .recommended-slider .container {
+    display: flex;
+    flex-direction: column;
+    align-content: stretch;
+    align-items: stretch;
+    background-color: var(--cardBg);
 }
-.hero-section .form-inline {
-  background-color: #c3cfd6;
-  width: 80%;
-  display: flex;
-  left: 10%;
-  right: 10%;
-  justify-content: space-around;
-  align-items: center;
-  text-align: center;
+
+.search-container-000 .form-container .form-wrapper, .search-container-000 .recommended-slider .container {
+    height: var(--containerInnerHeight);
+    width: var(--containerInnerWidth);
+    display: flex;
+    margin: auto;
+    padding: var(--containerInnerPadding);
+    text-align: center;
+}
+
+.search-container-000 .form-container .form-inline {
+    height: var(--searchFormHeight);
+    max-height: 255px;
+    min-height: 150px;
+    margin-top: 60px; // to make up for no heading (so it's the same size)
+    width: var(--searchFormWidth);
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    background-color: var(--cardBg);
+}
+
+.search-container-000 .recommended-slider .container {
+    background-color: transparent;
+}
+
+.search-container-000 .form-container .form-inline button {
+    padding: var(--btnPadding);
+    background-color: var(--btnColor);
+    color: var(--btnTextColor);
+}
+
+.search-container-000 .form-container .form-inline button a {
+    color: var(--btnTextColor);
+}
+
+.search-container-000 .form-container .form-inline label {
+    padding: 10px;
+}
+
+.search-container-000 .form-container .form-inline select {
+    padding: 5px 10px;
+}
+.ionicon {
+  display: inline-block;
+  font-size: 20px;
+  width: 20px;
+  height: 20px;
+  margin-bottom: 4px;
+  color: #373737;
+}
+.search-container-000 .card {
+    background-color: var(--cardBg);
+    width: 100%;
+}
+
+.search-container-000 .card .button {
+    background-color: var(--btnColor);
+}
+
+.search-container-000 .recommended-slider .card-body-inner {
+    padding: var(--carouselSliderPadding);
+    background-color: transparent;
+}
+
+.search-container-000 .recommended-slider .carousel {
+    height: var(--rootHeight);
+    width: 100%;
+}
+
+.search-container-000 .recommended-slider .carousel .card {
+    width: 100%;
+    margin: 0 auto;
+    border: none;
+}
+
+.search-container-000 .carousel-control-next,
+.search-container-000 .carousel-control-prev {
+    width: 8% !important;
+}
+
+.search-container-000 .start-again-btn { // POSSIBLE TWEAKS - Start Over Button (positioning is controlled by 'top' and 'left' values)
+  background-color: var(--startAgainBtnColor);
+  color: var(--startAgainBtnTextColor);
+  font-size: 18px;
+  height: 44px;
+  vertical-align: middle;
+  top: 5%; // this is the default top value (anything with viewport max-width greater than 1800px)
   position: absolute;
-  bottom: -80px;
-  padding: 60px 10px;
+  right: 15%; // this is the default right value  (anything with viewport max-width greater than 1800px)
 }
-.hero-section .form-inline button {
-  background-color: var(--btnColor);
-  color: #fff;
-  padding: 7px 60px;
+@media only screen and (max-width: 1800px) { // viewport is less than 1800px (this will target almost all screen sizes)
+  .search-container-000 .start-again-btn {
+    top: 5%; 
+    right: 20%;
+  }
 }
-.hero-section .form-inline label {
-  padding: 10px;
+@media only screen and (max-width: 1500px) { // viewport is less than 1800px (this will target most screen sizes - but not the larger ones above)
+  .search-container-000 .start-again-btn {
+    top: 10%;
+    right: 15%;
+  }
 }
-.hero-section .form-inline select {
-  padding: 10px;
-}
-.card {
-  background-color: var(--cardBg);
-}
-.card .button {
-  background-color: var(--btnColor);
-}
-.card-1 {
-  padding: 1rem;
-  margin: 0 10px 20px 10px;
-  background-color: white;
-}
-.recommended-slider {
-  width: 100%;
-  margin: auto;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  data-interval: false;
-  // margin-bottom: 20px;
-}
-.recommended-slider .container {
-  background-color: var(--cardBg);
-}
-.recommended-slider .carousel .card {
-  width: 90%;
-  margin: 0 auto;
-  border: none;
-}
-.carousel-control-next,
-.carousel-control-prev {
-  width: 7% !important;
-}
-.carousel-control-prev-icon {
-  width: 40px;
-  height: 40px;
-  /* background-image: url("https://img.icons8.com/ios-filled/50/000000/circled-left-2.png"); */
-}
-.carousel-control-next-icon {
-  width: 40px;
-  height: 40px;
-  /* background-image: url("https://img.icons8.com/ios-filled/50/000000/circled-right-2.png"); */
-}
-.carousel-control-next {
-  border-bottom: 0;
-  font-size: 40px;
-  color: black;
+@media only screen and (max-height: 500px) {
+  .search-container-000 .start-again-btn {
+    top: 12%;
+  }
 }
 
-.carousel-control-prev {
-  border-bottom: 0;
-  font-size: 40px;
-  color: black;
+@media only screen and (max-height: 400px) {
+  .search-container-000 .start-again-btn {
+    top: 15%;
+  }
 }
-.recommended-slider h2 {
-  padding-top: 10px;
-  padding-left: 10px;
+@media only screen and (max-height: 300px) {
+  .search-container-000 .start-again-btn {
+    top: 20%;
+  }
 }
-.recommended-slider .card-1 {
-  padding: 20px;
-  background-color: white;
+.search-container-000 .carousel-control-prev-icon {
+    width: var(--nextPrevIconSize);
+    height: var(--nextPrevIconSize);
+    background-image: url("https://img.icons8.com/ios-filled/50/000000/circled-left-2.png");
 }
-.recommended-slider .content {
-  display: flex;
-  justify-content: space-between;
+
+.search-container-000 .carousel-control-next-icon {
+    width: var(--nextPrevIconSize);
+    height: var(--nextPrevIconSize);
+    background-image: url("https://img.icons8.com/ios-filled/50/000000/circled-right-2.png");
 }
-.recommended-slider .left {
-  display: flex;
+
+.search-container-000 .carousel-control-next {
+    border-bottom: 0;
+    font-size: var(--nextPrevIconSize);
+    color: black;
 }
-.recommended-slider .left-img {
-  padding-left: 10px;
+
+.search-container-000 .carousel-control-prev {
+    border-bottom: 0;
+    font-size: var(--nextPrevIconSize);
+    color: black;
 }
-.recommended-slider .left-text {
-  padding-left: 20px;
+
+.search-container-000 .recommended-slider h2 {
+    padding-top: 10px;
+    padding-left: 10px;
 }
-.recommended-slider .left-text h3 {
-  color: var(--gTextColor);
+
+
+.search-container-000 .recommended-slider .content {
+    display: flex;
+    justify-content: space-between;
 }
-.recommended-slider .left-text p {
-  color: var(--tertiaryTextColor);
+
+.search-container-000 .recommended-slider .left {
+    display: flex;
 }
-.recommended-slider .right {
-  text-align: right;
-  line-height: 12px;
+
+.search-container-000 .recommended-slider .left-img {
+    padding-left: 10px;
 }
-.recommended-slider .right .greenText {
-  color: var(--gTextColor);
-  font-weight: bold;
+
+.search-container-000 .recommended-slider .left-text {
+    padding-left: 20px;
 }
-.recommended-slider .right i {
-  color: var(--starColor);
+
+.search-container-000 .recommended-slider .left-text h3 {
+    color: var(--gTextColor);
+}
+
+.search-container-000 .recommended-slider .left-text p {
+    color: var(--tertiaryTextColor);
+}
+
+.search-container-000 .recommended-slider .right {
+    text-align: right;
+    line-height: 12px;
+}
+
+.search-container-000 .recommended-slider .right .greenText {
+    color: var(--gTextColor);
+    font-weight: bold;
+}
+
+.search-container-000 .recommended-slider .right i {
+    color: var(--starColor);
 }
 
 @media only screen and (max-width: 600px) {
-  .recommended-section {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .recommended-section .content {
-    display: flex;
-  }
-  .recommended-section .left {
-    display: flex;
-    flex-direction: row;
-  }
-  .recommended-section .right {
-    padding-top: 70px;
-    text-align: center;
-  }
-  .recommended-slider {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .recommended-slider .content {
-    display: flex;
-  }
-  .recommended-slider .left {
+  .search-container-000 .form-container .form-wrapper .form-inline {
     display: flex;
     flex-direction: column;
   }
-  .recommended-slider .right {
-    padding-top: 70px;
-    text-align: center;
-  }
+    .search-container-000 .recommended-slider {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .search-container-000 .recommended-slider .content {
+        display: flex;
+    }
+
+    .search-container-000 .recommended-slider .left {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .search-container-000 .recommended-slider .right {
+        padding-top: 70px;
+        text-align: center;
+    }
 }
+
