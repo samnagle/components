@@ -13,16 +13,16 @@ code {
 
 
 :root {
-    --rootHeight: 100vh; // outer-container height (the whole viewport)
-    --rootWidth: 100%; // outer-container height
-    --containerInnerHeight: 100%; // percentage height of the root you want to fill (excluding margin/header size)
+    --rootHeight: 100vh; /* outer-container height (the whole viewport) */
+    --rootWidth: 100%; /* outer-container height */
+    --containerInnerHeight: 100%; /* percentage height of the root you want to fill (excluding margin/header size) */
     --containerInnerWidth: 70%;
-    --searchFormHeight: 80%; // 80% seems to match the natural height of the carousel
+    --searchFormHeight: 80%; /* 80% seems to match the natural height of the carousel */
     --searchFormWidth: 100%;
     --carouselSliderPadding: 20px 60px;
     --containerInnerPadding: 60px 10px;
-    --nextPrevIconSize: 40px; // this changes the next/prev icon size
-    --btnPadding: 10px 30px; // padding for the "GO" button
+    --nextPrevIconSize: 40px; /* this changes the next/prev icon size */
+    --btnPadding: 10px 30px; /* padding for the "GO" button */
     --startAgainBtnTextColor: #000;
     --startAgainBtnColor: transparent;
     --primaryTextColor: #000;
@@ -32,8 +32,8 @@ code {
     --whiteTextColor: #ffffff;
     --btnTextColor: #fff;
     --starColor: #fea700;
-    --btnColor: blue; // background color
-    --cardBg: #f6f2ec; // the (currently) grey/cream/off-white background color of the card 
+    --btnColor: blue; /* background color */
+    --cardBg: #f6f2ec; /* the (currently) grey/cream/off-white background color of the card */
 }
 
 .search-container-000 .dropdown-toggle::after {
