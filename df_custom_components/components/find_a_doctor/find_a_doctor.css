@@ -88,7 +88,7 @@ body {
     height: var(--searchFormHeight);
     max-height: 255px;
     min-height: 150px;
-    margin-top: 60px; // to make up for no heading (so it's the same size)
+    margin-top: 60px; /* to make up for no heading (so it's the same size) */
     width: var(--searchFormWidth);
     justify-content: space-around;
     align-items: center;
@@ -156,23 +156,26 @@ body {
     width: 8% !important;
 }
 
-.search-container-000 .start-again-btn { // POSSIBLE TWEAKS - Start Over Button (positioning is controlled by 'top' and 'left' values)
+.search-container-000 .start-again-btn {
+  /*
+  POSSIBLE TWEAKS - Start Over Button (positioning is controlled by 'top' and 'left' values)
+  */
   background-color: var(--startAgainBtnColor);
   color: var(--startAgainBtnTextColor);
   font-size: 18px;
   height: 44px;
   vertical-align: middle;
-  top: 5%; // this is the default top value (anything with viewport max-width greater than 1800px)
+  top: 5%; /* this is the default top value (anything with viewport max-width greater than 1800px) */
   position: absolute;
-  right: 15%; // this is the default right value  (anything with viewport max-width greater than 1800px)
+  right: 15%; /* this is the default right value  (anything with viewport max-width greater than 1800px)*/
 }
-@media only screen and (max-width: 1800px) { // viewport is less than 1800px (this will target almost all screen sizes)
+@media only screen and (max-width: 1800px) { /* viewport is less than 1800px (this will target almost all screen sizes) */
   .search-container-000 .start-again-btn {
     top: 5%; 
     right: 20%;
   }
 }
-@media only screen and (max-width: 1500px) { // viewport is less than 1800px (this will target most screen sizes - but not the larger ones above)
+@media only screen and (max-width: 1500px) { /* viewport is less than 1800px (this will target most screen sizes - but not the larger ones above) */
   .search-container-000 .start-again-btn {
     top: 10%;
     right: 15%;
