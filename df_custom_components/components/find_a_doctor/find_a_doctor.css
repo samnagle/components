@@ -1,17 +1,3 @@
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-}
-
-*,
-::before,
-::after {
-  margin: 0;
-  padding: 0;
-}
-
-
 :root {
     --rootHeight: 100vh; /* outer-container height (the whole viewport) */
     --rootWidth: 100%; /* outer-container height */
