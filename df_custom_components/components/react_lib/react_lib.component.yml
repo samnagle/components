@@ -10,14 +10,9 @@ type: 'library'
 # The downside to an external JS file is that it can not be used "offline" or
 #   when there isn't an internet connection.
 js:
-  #//unpkg.com/react@16.7.0/umd/react.production.min.js: { type: external, minified: true, crossorigin: anonymous }
-  #//unpkg.com/react-dom@16.7.0/umd/react-dom.production.min.js: { type: external, minified: true, crossorigin: anonymous }
-  #//unpkg.com/create-react-class@15.6.0/create-react-class.min.js : { type: external, minified: true, crossorigin: anonymous }
   //unpkg.com/babel-standalone@6/babel.min.js: { type: external, minified: true, crossorigin: anonymous }
-  #
-  //unpkg.com/react@17/umd/react.development.js: { type: external, minified: true, crossorigin: anonymous }
+  //unpkg.com/react@16.7.0/umd/react.production.min.js: { type: external, minified: true, crossorigin: anonymous }
+  //unpkg.com/react-dom@16.7.0/umd/react-dom.production.min.js: { type: external, minified: true, crossorigin: anonymous }
   //cdnjs.cloudflare.com/ajax/libs/reactstrap/8.9.0/reactstrap.min.js: { type: external, minified: true, crossorigin: anonymous }
-  //unpkg.com/react-dom@17/umd/react-dom.development.js: { type: external, minified: true, crossorigin: anonymous }
   //cdnjs.cloudflare.com/ajax/libs/react-router-dom/5.2.0/react-router-dom.min.js: { type: external, minified: true, crossorigin: anonymous }
-  //cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js: { type: external, minified: true, crossorigin: anonymous }
-  //cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js: { type: external, minified: true, crossorigin: anonymous }
+  //cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/js/bootstrap.min.js: { type: external, minified: true, crossorigin: anonymous }

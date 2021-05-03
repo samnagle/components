@@ -3,9 +3,9 @@ description: 'Find a Doctor component using React from a CDN. https://codepen.io
 type: 'block'
 js:
   find_a_doctor.js: {attributes: { type: 'text/babel' }}
-#css:
- # //cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css: { type: external, minified: true, crossorigin: anonymous }
+css:
   find_a_doctor.css: {}
+  //cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.min.css: { type: external, minified: true, crossorigin: anonymous }
 # This component makes use of an existing shared library which is provided by
 #   another component (library type). This is how to share and manage common
 #   assets across different components.

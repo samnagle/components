@@ -13,8 +13,6 @@ body {
 }
 
 :root {
-    --rootHeight: 100vh; /* outer-container height (the whole viewport) */
-    --rootWidth: 100%; /* outer-container height */
     --containerInnerHeight: 100%; /* percentage height of the root you want to fill (excluding margin/header size) */
     --containerInnerWidth: 70%;
     --searchFormHeight: 80%; /* 80% seems to match the natural height of the carousel */
@@ -159,7 +157,7 @@ body {
 }
 @media only screen and (max-width: 1800px) { /* viewport is less than 1800px (this will target almost all screen sizes) */
   .search-container-000 .start-again-btn {
-    top: 5%; 
+    top: 5%;
     right: 20%;
   }
 }
